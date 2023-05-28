@@ -1,0 +1,97 @@
+
+
+img{
+    width: 80%;
+    border-radius: 10%;
+}
+
+  input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 2px solid orange;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 40px;
+    margin-left: 20%;
+  }
+
+  
+  button {
+    padding: 8px 16px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 10px;
+    margin:auto;
+
+  
+  }
+
+  .profile img{
+    width: 80%;
+    border-radius: 10%;
+    margin-left: 19px;
+
+  }
+  
+  .full-name {
+    font-size: 27px;
+    margin: 10px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+   
+  }
+  
+  
+  
+  .player-image{
+    width: 250px;
+    border: 5px solid #000000;
+    background-color:black;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10%;
+    border-color: orange;
+    
+  }
+
+  p{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    margin-top: 10%;
+    background-color:orange;
+    color: #000000;
+    margin-bottom: 7%;
+    margin-left: 50px;
+}
+
+.team{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.team img{
+  border-radius: 10%;
+  margin-left: 10px;
+}
+
+h2{
+  margin-top: 5%;
+  margin-left: 35%;
+}
+
+
