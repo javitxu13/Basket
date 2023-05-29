@@ -14,7 +14,7 @@ export const renderPlayerImage = (fullName) => {
       "Rudy Gobert": "https://www.ballysports.com/images/image/private/t_1-1_768/f_auto/v1657224732/prod/pbcrmch57b9d0qalbk8j.jpg",
     };
   
-    const imageUrl = playerImages[fullName];
+    const imageUrl = playerImages[fullName]; // Buscar la imagen del jugador en el objeto playerImages
   
     if (imageUrl) {
       return <img src={imageUrl} alt={fullName} />;

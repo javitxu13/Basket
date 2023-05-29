@@ -3,10 +3,10 @@ import axios from 'axios';
 import Plot from 'react-plotly.js';
 
 const PlayerStatsChart = ({ playerId }) => {
-  const [playerStats, setPlayerStats] = useState(null);
+  const [playerStats, setPlayerStats] = useState(null); // Estado para guardar los datos del jugador
 
-  useEffect(() => {
-    const fetchPlayerStats = async () => {
+  useEffect(() => { // Obtener los datos del jugador de la API
+    const fetchPlayerStats = async () => { 
       try {
         const response = await axios.get(`https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${playerId}`);
         const stats = response.data.data[0];
@@ -16,16 +16,16 @@ const PlayerStatsChart = ({ playerId }) => {
       }
     };
 
-    fetchPlayerStats();
+    fetchPlayerStats(); 
   }, [playerId]);
 
-  if (!playerStats) {
+  if (!playerStats) { // Si no hay datos del jugador, no mostrar nada
     return ;
   }
 
-  const { pts, ast, reb, blk, stl } = playerStats;
+  const { pts, ast, reb, blk, stl } = playerStats; // Obtener los datos del jugador del estado
 
-  const chartData = [
+  const chartData = [ // Datos para el gráfico de barras 
     {
       x: ['Points', 'Assists' , 'Rebounds', 'Blocks', 'Steals'],
       y: [pts, ast , reb, blk, stl],
@@ -36,7 +36,7 @@ const PlayerStatsChart = ({ playerId }) => {
     },
   ];
 
-  const layout = {
+  const layout = { // Configuración del gráfico de barras 
     title: 'Player Stats',
     xaxis: {
       title: 'Categories',
@@ -53,14 +53,10 @@ const PlayerStatsChart = ({ playerId }) => {
       t: 100,
       pad: 9,
     },
-
-
-
     plot_bgcolor: 'black', // Cambiar el color de fondo del gráfico
   };
   
     
-
   return (
     <div>
       <Plot data={chartData} layout={layout} />

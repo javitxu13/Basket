@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import PlayerProfile from './components/PlayerProfile';
 import axios from 'axios';
+import Navbar from './components/Navbar';
 
 const App = () => {
 
-  const [player, setPlayer] = useState({});
+  /* const [player, setPlayer] = useState({});
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
@@ -21,14 +21,13 @@ const App = () => {
     } catch (error) {
       console.error(error);
     }
-  };
+  }; */
 
 
   return (
     <BrowserRouter>
-      <Navbar />
-      <PlayerProfile player={player} />
-
+    <Navbar/ >
+      <PlayerProfile  />
     </BrowserRouter>
   );
 }
